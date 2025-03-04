@@ -7,6 +7,9 @@ fi
 
 cd "$FRONTEND_PROD_PATH"
 
+source "$NVM_PATH"
+nvm use 20.17.0
+
 echo "Pulling latest changes..."
 git pull origin main
 
@@ -18,3 +21,5 @@ npm run build
 
 echo "Copying files to server..."
 sudo cp -rf dist/* "$FRONTEND_DEPLOYED_PROD_PATH"
+
+echo "Done"

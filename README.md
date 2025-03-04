@@ -12,7 +12,8 @@ A Node.js-based continuous integration and continuous deployment (CI/CD) server 
 
 ## Prerequisites
 
-- Node.js (v14 or higher recommended)
+- Node Version Manager (NVM)
+- Node.js (v20.17.0)
 - npm
 - PM2 (for process management)
 - Git
@@ -36,6 +37,7 @@ npm install
 ```env
 PORT=3000
 SECRET=your_github_webhook_secret
+NVM_PATH=/path/to/nvm/nvm.sh
 FRONTEND_PROD_PATH=/path/to/frontend/prod/repo
 FRONTEND_DEV_PATH=/path/to/frontend/dev/repo
 BACKEND_PROD_PATH=/path/to/backend/prod/repo
