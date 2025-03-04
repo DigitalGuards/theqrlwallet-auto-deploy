@@ -7,6 +7,9 @@ fi
 
 cd "$BACKEND_PROD_PATH"
 
+source "$NVM_PATH"
+nvm use 20.17.0
+
 echo "Pulling latest changes..."
 git pull origin main
 
@@ -15,3 +18,5 @@ npm install
 
 echo "Restarting server..."
 pm2 restart "$BACKEND_PROD_PM2_NAME"
+
+echo "Done"
